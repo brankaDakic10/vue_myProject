@@ -6,10 +6,15 @@
     <th>Lastname</th> 
     <th>Email</th>
   </tr>
-  <tr v-for="(contact, key) in contacts" :key="key">
+  <tr 
+  v-for="(contact, key) in contacts" 
+  :key="key" 
+  v-if="contact.firstName ==='John'">
+
     <td>{{contact.firstName}}</td>
     <td>{{contact.lastName}}</td>
    <td>{{contact.email}}</td>
+   
   </tr>
  
 </table>
