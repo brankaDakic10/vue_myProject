@@ -11,8 +11,10 @@ Vue.config.productionTip = false
 Vue.use(VueRouter)
 
 const routes=[
-    { path:'/', component:Foo},
-    { path:'/bar', component:Bar}
+  {path:'/',redirect:'/foo'},
+    
+  { path:'/foo', component:Foo},
+  { path:'/bar', component:Bar}
 
 ]
 const router= new VueRouter({
