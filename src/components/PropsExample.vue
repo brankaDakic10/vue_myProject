@@ -1,6 +1,8 @@
 <template>
   <div >
-   {{message}}
+   {{ message }}
+   <article>{{ reversedMessage }}</article>
+   
  <button @click='notifyParent'> Notify Parent</button>
   </div>
 </template>
@@ -13,9 +15,13 @@ export default {
    notifyParent(){
        this.$emit('notify-parent','Hello from child component')
    }
+},
+computed:{
 
-
-  }
+    reversedMessage(){
+     return this.message.split('').reverse().join('')
+    }
+ }
 }
 </script>
 
